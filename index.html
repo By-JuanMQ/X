@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <title>Juan MQ 👑 | Redes Oficiales</title>
+
+<meta name="description" content="Redes oficiales de Juan MQ. Gaming, contenido y directos. Sígueme en todas mis plataformas desde un solo lugar.">
+
+<meta name="keywords" content="Juan MQ, gaming, streamer, creador de contenido, Twitch, YouTube, TikTok">
+
+<meta name="author" content="Juan MQ">
+
+<!-- Open Graph (cuando lo compartes en WhatsApp, Facebook, etc.) -->
+<meta property="og:title" content="Juan MQ 👑 | Redes Oficiales">
+<meta property="og:description" content="Gaming, directos y contenido. Todas mis redes en un solo link.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://by-juanmq.github.io">
+<meta property="og:image" content="https://by-juanmq.github.io/logo.png">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Juan MQ 👑 | Redes Oficiales">
+<meta name="twitter:description" content="Todas mis redes oficiales en un solo lugar.">
+<meta name="twitter:image" content="https://by-juanmq.github.io/logo.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan MQ | Redes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
+    body{
+      min-height:100vh;
+      background:radial-gradient(circle at top,#0f2027,#05080a 60%),linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden
+    }
+    .enter{animation:enter 1.2s ease forwards}
+    @keyframes enter{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+    .hud{position:fixed;top:12px;right:14px;font-size:12px;opacity:.75}
+    .icon{width:22px;height:22px;filter:invert(1)}
+    .links a{--c:#00f5ff;display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;color:#fff;margin:12px 0;padding:14px;border-radius:14px;background:linear-gradient(135deg,var(--c),#111);font-weight:600;transition:.25s;position:relative;overflow:hidden}
+    .links a:hover{transform:translateY(-6px) scale(1.05);box-shadow:0 0 22px var(--c),0 0 60px rgba(0,245,255,.45)}
+    .avatar{width:120px;height:120px;border-radius:50%;margin:0 auto 16px;background:#000;display:flex;align-items:center;justify-content:center;box-shadow:0 0 40px rgba(0,245,255,.7);overflow:hidden}
+    .avatar img{width:80%;filter:drop-shadow(0 0 18px #00f5ff)}
+  </style>
+</head>
+<body>
+  <div class="hud">👁️ Visitas: <span id="v">0</span></div>
+  <div class="bg">
+    <span style="left:10%;animation-duration:18s"></span>
+    <span style="left:30%;animation-duration:22s"></span>
+    <span style="left:50%;animation-duration:25s"></span>
+    <span style="left:70%;animation-duration:20s"></span>
+    <span style="left:90%;animation-duration:26s"></span>
+  </div>  <div class="card">
+    <div class="avatar enter"><img src="data:image/png;base64,BASE64_LOGO_AQUI" alt="Juan MQ"></div>
+    <h1>Juan MQ</h1>
+    <p>Creador • Gaming • Redes Sociales</p><div class="links">
+  <div class="neon"></div>
+  <a href="#" style="--c:#e1306c" onclick="sound('ig')"()"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" class="icon"> Instagram</a>
+  <a href="#" style="--c:#00f2ea" onclick="sound('tt')"()"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" class="icon"> TikTok</a>
+  <a href="#" style="--c:#9146ff" onclick="sound('tw')"()"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitch.svg" class="icon"> Twitch</a>
+  <a href="#" style="--c:#ff0033" onclick="sound('yt')"()"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" class="icon"> YouTube</a>
+  <a href="#" style="--c:#1877f2" onclick="sound('fb')"()"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" class="icon"> Facebook</a>
+  <a href="#" style="--c:#25d366" onclick="sound('wa')"()"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" class="icon"> WhatsApp</a>
+</div>
+
+<footer>✨ Hecho con estilo por Juan MQ</footer>
+
+  </div>  <audio id="clickSound">
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3" type="audio/mpeg">
+  </audio>  <script>
+    // sonido click
+    function sound(type){
+      const s={ig:1109,tt:1109,tw:1109,yt:1109,fb:1109,wa:1109};
+      document.getElementById('clickSound').play();
+      if(navigator.vibrate) navigator.vibrate(20);
+    }
+
+    // efecto 3D con mouse
+    document.querySelectorAll('.links a').forEach(btn=>{
+      btn.addEventListener('mousemove',e=>{
+        const r=btn.getBoundingClientRect();
+        const x=e.clientX-r.left;
+        const y=e.clientY-r.top;
+        btn.style.transform=`rotateY(${(x-r.width/2)/10}deg) rotateX(${-(y-r.height/2)/10}deg) scale(1.07)`;
+      });
+      btn.addEventListener('mouseleave',()=>{ btn.style.transform=''; });
+    });
+
+    // partículas neon
+    const canvas=document.createElement('canvas');
+    document.body.appendChild(canvas);
+    const ctx=canvas.getContext('2d');
+    canvas.style.position='fixed';canvas.style.inset=0;canvas.style.pointerEvents='none';
+    function resize(){canvas.width=innerWidth;canvas.height=innerHeight;} resize(); addEventListener('resize',resize);
+    const parts=Array.from({length:60},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,v:0.3+Math.random()}));
+    (function anim(){ ctx.clearRect(0,0,canvas.width,canvas.height); ctx.fillStyle='rgba(0,245,255,.6)';
+      parts.forEach(p=>{ p.y-=p.v; if(p.y<0)p.y=innerHeight; ctx.fillRect(p.x,p.y,2,2); }); requestAnimationFrame(anim); })();
+
+    // contador visitas
+    const v=+localStorage.getItem('v')+1||1; localStorage.setItem('v',v); document.getElementById('v').textContent=v;
+
+    // cursor glow
+    const cur=document.createElement('div');
+    Object.assign(cur.style,{position:'fixed',width:'18px',height:'18px',borderRadius:'50%',background:'rgba(0,245,255,.6)',pointerEvents:'none',mixBlendMode:'screen'});
+    document.body.appendChild(cur);
+    addEventListener('mousemove',e=>{cur.style.transform=`translate(${e.clientX-9}px,${e.clientY-9}px)`});
+  </script></body>
+</html>
